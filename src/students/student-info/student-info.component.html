@@ -1,0 +1,5 @@
+<app-student-family *ngIf="component == 'student-family'" (callComponent)="getComponent($event)"></app-student-family>
+<app-previous-enrollment *ngIf="component == 'previous-enrollment'" (callComponent)="getComponent($event)"></app-previous-enrollment>
+<app-admission *ngIf="component == 'admission'" (callComponent)="getComponent($event)"></app-admission>
+<app-document *ngIf="component == 'document'" (callComponent)="getComponent($event)"></app-document>
+<app-address *ngIf="component == 'address'" (callComponent)="getComponent($event)"></app-address>

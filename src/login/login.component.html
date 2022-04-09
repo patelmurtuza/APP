@@ -1,0 +1,57 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+<section class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 login-sec">
+        <!-- <h2 class="text-center">Login Now</h2> -->
+        <div class="img-logo-sec">
+          <img src="../assets/logo.png" />
+        </div>
+        <mat-card>
+          <mat-card-content>
+            <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && submit()" novalidate>
+                <div *ngIf="errorMessage" class="alert alert-danger">
+                  {{errorMessage}}
+                </div>
+                <mat-card-title class="title">Log In</mat-card-title>
+                <p>
+                  <mat-form-field>
+                    <input matInput placeholder="Email Address" [(ngModel)]="request.userName" name="userName" required>
+                    <mat-error>Please enter Email Address</mat-error>
+                  </mat-form-field>
+                </p>
+              
+                <p>
+                  <mat-form-field>
+                    <input matInput placeholder="Password" [(ngModel)]="request.password" type="password" name="password"
+                      required>
+                    <mat-error>Please enter Password</mat-error>
+                  </mat-form-field>
+                </p>
+              
+                <div class="button">
+                  <button mat-raised-button style="margin-right: 16px" color="primary" [disabled]="loginForm.form.invalid">Log in</button>
+                </div>
+              </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-md-7 banner-sec">
+        <div class="login-banner">
+          <img src="../assets/banner1.png" class="img-fluid" />
+        </div>
+        <div class="banner-info">
+          <h3>Your key to operational</h3>
+          <p>Build and scale your processes with Asana. Improve efficiency, and give your team more time to focus on
+            their most important goals.</p>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
